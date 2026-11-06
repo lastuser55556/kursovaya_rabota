@@ -5,6 +5,7 @@
   const config = window.K21_CONFIG || {};
   // Capture campaign on every landing page, before navigation to the form.
   const incoming = new URLSearchParams(location.search);
+  let debug=false; try{if(incoming.has('debug_mode'))sessionStorage.setItem('k21_debug',incoming.get('debug_mode')==='1'?'1':'0');debug=sessionStorage.getItem('k21_debug')==='1';}catch{}
   const defaults={utm_source:'direct',utm_medium:'none',utm_campaign:'not_set',utm_content:'not_set'};
   if(Object.keys(defaults).some(key=>incoming.has(key))) {
     const utm={}; for(const [key,fallback] of Object.entries(defaults)) {const v=incoming.get(key)||fallback;utm[key]=/^[a-z0-9_]{1,100}$/.test(v)?v:fallback;}
@@ -24,7 +25,7 @@
     }
     safe.search=params.toString(); safe.hash='';
     let referrer=''; try{const r=new URL(document.referrer);r.search='';r.hash='';referrer=r.href;}catch{}
-    gtag('config', config.ga4Id, {page_location:safe.href, page_referrer:referrer, debug_mode:false});
+    gtag('config', config.ga4Id, {page_location:safe.href, page_referrer:referrer, debug_mode:debug});
   }
   window.K21 = {track(name, values = {}) {
     if (!events.has(name)) return;
