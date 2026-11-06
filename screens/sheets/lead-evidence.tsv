@@ -1,0 +1,4 @@
+request_id	created_at	name	phone	email	car_type	rim_size	slot	utm_source	utm_medium	utm_campaign	utm_content	status
+REQ-cc05728f-edfc-4216-886d-70ba434bc74f	07.11.2026 2:24:46	Тест интеграции Колесо 21	+70000000000		crossover	r16_17	07.11.2026 8:00:00	instagram	social	winter_tires_2026	reel_tread_01	new
+REQ-f40316cd-8792-4fbf-91c3-d6c5a5b988d0	07.11.2026 2:25:40	Приёмка ТЗ-21/2026	+70000000000		car	r13_15	07.11.2026 9:00:00	instagram	social	winter_tires_2026	reel_tread_01	new
+												

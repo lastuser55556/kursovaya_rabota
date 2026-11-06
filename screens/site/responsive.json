@@ -1,0 +1,218 @@
+[
+  {
+    "requestedWidth": 375,
+    "file": "index.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Шиномонтаж и запись на время — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "tires.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Шиномонтаж — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "storage.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Хранение шин — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "services.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Автосервис — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "winter-tips.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Когда переобуваться — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "contacts.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Запись и контакты — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "thanks.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Спасибо за запись — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "privacy.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Политика конфиденциальности — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 375,
+    "file": "404.html",
+    "h1": 1,
+    "scroll": 375,
+    "title": "Страница не найдена — Колесо 21",
+    "viewport": 375
+  },
+  {
+    "requestedWidth": 768,
+    "file": "index.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Шиномонтаж и запись на время — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "tires.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Шиномонтаж — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "storage.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Хранение шин — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "services.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Автосервис — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "winter-tips.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Когда переобуваться — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "contacts.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Запись и контакты — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "thanks.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Спасибо за запись — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "privacy.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Политика конфиденциальности — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 768,
+    "file": "404.html",
+    "h1": 1,
+    "scroll": 768,
+    "title": "Страница не найдена — Колесо 21",
+    "viewport": 768
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "index.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Шиномонтаж и запись на время — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "tires.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Шиномонтаж — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "storage.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Хранение шин — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "services.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Автосервис — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "winter-tips.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Когда переобуваться — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "contacts.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Запись и контакты — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "thanks.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Спасибо за запись — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "privacy.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Политика конфиденциальности — Колесо 21",
+    "viewport": 1280
+  },
+  {
+    "requestedWidth": 1280,
+    "file": "404.html",
+    "h1": 1,
+    "scroll": 1280,
+    "title": "Страница не найдена — Колесо 21",
+    "viewport": 1280
+  }
+]

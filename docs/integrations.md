@@ -1,6 +1,12 @@
 # Подключение Google Sheets и Apps Script
 
-## Учебный ресурс
+## Текущее состояние
+
+Нативная [учебная таблица](https://docs.google.com/spreadsheets/d/1wplyIpkCAh8myS5_qHFk4SZn8-v5e6nKiOvdXOPn2dA/edit) уже создана. Четыре листа импортированы из проверенного XLSX с явным согласием пользователя на альтернативный процесс; схема и проверки данных подготовлены. Apps Script проект `12i4wdSwuDjEF8a6WO3yP0Fg60H0owIs2hC3wJzTHef3epdXm-0yCnIgj` содержит сохранённый код и заданное свойство SPREADSHEET_ID. Web app авторизован и опубликован; initializeProject выполнена успешно. Публичный endpoint уже подтверждён пользователем, повторного разрешения на него не требуется. Работа /exec подтверждена реальной заявкой с Pages и проверкой duplicate; доказательства перечислены ниже.
+
+GA4 G-YEMK5T27NW создан и настроен, но DebugView пока 0 received. Не считать данные в подготовленной таблице доказательством полученного generate_lead. DataLens/ManyChat по выбору пользователя остаются только материалами.
+
+## Воспроизводимая настройка учебного ресурса
 
 1. В учебном Google-аккаунте создайте таблицу `Koleso21 — Bookings`.
 2. Откройте Extensions → Apps Script. Перенесите `apps-script/Code.gs`.
@@ -35,3 +41,17 @@ ScriptLock охватывает поиск дубля, проверку четы
 Таблица с персональными данными не публикуется в интернете. Viewer предоставляется конкретному учебному e-mail преподавателя. DataLens получает только необходимые обезличенные поля. Не включайте name, phone, email в GA4, URL страницы, скриншоты публичного репозитория или публичный dashboard.
 
 Публичный endpoint учебного проекта не содержит секрета, поэтому не обеспечивает полноценную промышленную антиспам-защиту. Есть валидация, ограничение размера, lock, дедупликация, ограничение постов. Для промышленного применения потребуются дополнительные средства антибот-защиты и согласованный процесс обработки данных; в курсовой используются исключительно тестовые данные.
+
+## Завершённые живые проверки, 06.11.2026
+
+Apps Script авторизован и опубликован, `initializeProject` выполнена успешно. Реальный endpoint: https://script.google.com/macros/s/AKfycbwNocgF2l0I-4CL3fbV2EGgmy2J01z2CQByNiPMGsa7bILGPjk2ZgoHzpODO4Hpr-De/exec . В нативной Sheets две **учебные тестовые** записи, не реальные клиентские обращения:
+
+- Строка 2: `REQ-cc05728f-edfc-4216-886d-70ba434bc74f`, интеграционный запрос с localhost; итоговый учебный статус `no_show`.
+- Строка 3: `REQ-f40316cd-8792-4fbf-91c3-d6c5a5b988d0`, «Приёмка ТЗ-21/2026» с опубликованного Pages, UTM `instagram / social / winter_tires_2026 / reel_tread_01`. Проведена `new → confirmed → reminded → visited`.
+- Повторный реальный POST ID строки 2 вернул `{"ok":false,"error":"duplicate","field":"request_id"}`; число тестовых записей осталось 2. Это живая серверная проверка, не mock.
+
+Доказательства: `screens/sheets/lead-evidence.tsv`, `duplicate-response.json`, `status-transitions.json`, `statuses.tsv`, а также PNG в `screens/index.md`. Время в Sheets отображается по Москве: 07.11.2026 02:24–02:25, что соответствует вечеру 06.11.2026 в часовом поясе пользователя America/Los_Angeles. Статус visited здесь — учебное изменение строки, не доказательство фактического посещения шиномонтажа.
+
+Мобильный Lighthouse через [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-lastuser55556-github-io-kursovaya_rabota/oywk7eo7hx?form_factor=mobile): Performance **93**, Accessibility **100**, SEO **100**, Best Practices **100**. Источник `screens/lighthouse/mobile.png`, `summary.json`; ранняя ошибка API 429 сохранена отдельно, не является финальным результатом. Последний подтверждённый успешный [deploy 42309139795](https://github.com/lastuser55556/kursovaya_rabota/actions/runs/42309139795), содержательных коммитов больше 10.
+
+**Ограничение GA4 сохраняется:** DebugView всё ещё 0 received, получение generate_lead и остальных событий не подтверждено. Доставка строки в Sheets и выполнение локального вызова аналитики не равны приёму события Google. Все испытания полностью пройденными не объявляются. ManyChat/DataLens остаются только материалами по выбранному пользователем объёму.

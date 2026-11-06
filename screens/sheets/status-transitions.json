@@ -1,0 +1,22 @@
+{
+  "verifiedFinal": "utm_source\tutm_medium\tutm_campaign\tutm_content\tstatus\ninstagram\tsocial\twinter_tires_2026\treel_tread_01\tno_show\ninstagram\tsocial\twinter_tires_2026\treel_tread_01\tvisited\n\t\t\t\t",
+  "actualTransitions": [
+    {
+      "request_id": "REQ-f40316cd-8792-4fbf-91c3-d6c5a5b988d0",
+      "sequence": [
+        "new",
+        "confirmed",
+        "reminded",
+        "visited"
+      ]
+    },
+    {
+      "request_id": "REQ-cc05728f-edfc-4216-886d-70ba434bc74f",
+      "sequence": [
+        "new",
+        "no_show"
+      ]
+    }
+  ],
+  "note": "Учебные статусы для проверки, не реальные посещения. Ошибочная промежуточная вставка отвергнута проверкой данных."
+}

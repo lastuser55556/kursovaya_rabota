@@ -28,7 +28,9 @@
     }
     safe.search=params.toString(); safe.hash='';
     let referrer=''; try{const r=new URL(document.referrer);r.search='';r.hash='';referrer=r.href;}catch{}
-    gtag('config', config.ga4Id, {page_location:safe.href, page_referrer:referrer, debug_mode:debug});
+    const tagConfig={page_location:safe.href, page_referrer:referrer};
+    if(debug) tagConfig.debug_mode=true;
+    gtag('config', config.ga4Id, tagConfig);
   }
   window.K21 = {track(name, values = {}) {
     if (!events.has(name)) return;

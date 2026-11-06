@@ -1,0 +1,503 @@
+{
+  "scope": "Offline static HTML/assets/syntax checks and local Apps Script VM tests; not acceptance or live analytics verification.",
+  "summary": {
+    "pass": 58,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "check": "nine_required_html",
+      "status": "PASS",
+      "evidence": [
+        "404.html",
+        "contacts.html",
+        "index.html",
+        "privacy.html",
+        "services.html",
+        "storage.html",
+        "thanks.html",
+        "tires.html",
+        "winter-tips.html"
+      ]
+    },
+    {
+      "check": "internal_links_and_fragments",
+      "status": "PASS",
+      "evidence": {
+        "checked": 172,
+        "errors": [],
+        "method": "existing local files; external services not fetched"
+      }
+    },
+    {
+      "check": "404.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Страница не найдена — Колесо 21",
+        "description": "Вернитесь на главную страницу Колесо 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "404.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "404.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "404.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "404.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "contacts.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Запись и контакты — Колесо 21",
+        "description": "Выберите дату и час визита. Контакты и адрес Колесо 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "contacts.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "contacts.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "contacts.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "contacts.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "index.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Шиномонтаж и запись на время — Колесо 21",
+        "description": "Рассчитайте стоимость переобувки и выберите время в Колесо 21. Новоозёрск, Объездное шоссе, 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "index.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "index.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "index.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "index.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "privacy.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Политика конфиденциальности — Колесо 21",
+        "description": "Учебная политика обработки данных проекта Колесо 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "privacy.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "privacy.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "privacy.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "privacy.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "services.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Автосервис — Колесо 21",
+        "description": "Замена масла, диагностика подвески и развал-схождение в Колесо 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "services.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "services.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "services.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "services.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "storage.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Хранение шин — Колесо 21",
+        "description": "Сезонное хранение комплекта шин. Мойка и пакеты включены.",
+        "missing": []
+      }
+    },
+    {
+      "check": "storage.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "storage.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "storage.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "storage.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "thanks.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Спасибо за запись — Колесо 21",
+        "description": "Подтверждение полученной записи Колесо 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "thanks.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "thanks.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "thanks.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "thanks.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "tires.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Шиномонтаж — Колесо 21",
+        "description": "Цены за комплект из 4 колёс и калькулятор шиномонтажа Колесо 21.",
+        "missing": []
+      }
+    },
+    {
+      "check": "tires.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "tires.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "tires.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "tires.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "winter-tips.html:seo_metadata",
+      "status": "PASS",
+      "evidence": {
+        "title": "Когда переобуваться — Колесо 21",
+        "description": "Правило +7 °C, проверка протектора и промокод WINTER10.",
+        "missing": []
+      }
+    },
+    {
+      "check": "winter-tips.html:language_h1",
+      "status": "PASS",
+      "evidence": {
+        "language": "ru",
+        "h1_count": 1
+      }
+    },
+    {
+      "check": "winter-tips.html:favicon",
+      "status": "PASS",
+      "evidence": [
+        "img/favicon.svg"
+      ]
+    },
+    {
+      "check": "winter-tips.html:image_alts",
+      "status": "PASS",
+      "evidence": {
+        "images": 0,
+        "missing": []
+      }
+    },
+    {
+      "check": "winter-tips.html:ga4_head_tag",
+      "status": "PASS",
+      "evidence": {
+        "method": "static script presence only; resource ownership/DebugView not proven"
+      }
+    },
+    {
+      "check": "unique_titles",
+      "status": "PASS",
+      "evidence": {
+        "404.html": "Страница не найдена — Колесо 21",
+        "contacts.html": "Запись и контакты — Колесо 21",
+        "index.html": "Шиномонтаж и запись на время — Колесо 21",
+        "privacy.html": "Политика конфиденциальности — Колесо 21",
+        "services.html": "Автосервис — Колесо 21",
+        "storage.html": "Хранение шин — Колесо 21",
+        "thanks.html": "Спасибо за запись — Колесо 21",
+        "tires.html": "Шиномонтаж — Колесо 21",
+        "winter-tips.html": "Когда переобуваться — Колесо 21"
+      }
+    },
+    {
+      "check": "unique_descriptions",
+      "status": "PASS",
+      "evidence": {
+        "404.html": "Вернитесь на главную страницу Колесо 21.",
+        "contacts.html": "Выберите дату и час визита. Контакты и адрес Колесо 21.",
+        "index.html": "Рассчитайте стоимость переобувки и выберите время в Колесо 21. Новоозёрск, Объездное шоссе, 21.",
+        "privacy.html": "Учебная политика обработки данных проекта Колесо 21.",
+        "services.html": "Замена масла, диагностика подвески и развал-схождение в Колесо 21.",
+        "storage.html": "Сезонное хранение комплекта шин. Мойка и пакеты включены.",
+        "thanks.html": "Подтверждение полученной записи Колесо 21.",
+        "tires.html": "Цены за комплект из 4 колёс и калькулятор шиномонтажа Колесо 21.",
+        "winter-tips.html": "Правило +7 °C, проверка протектора и промокод WINTER10."
+      }
+    },
+    {
+      "check": "og_asset_1200x630",
+      "status": "PASS",
+      "evidence": {
+        "path": "img/og.jpg",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 48889
+      }
+    },
+    {
+      "check": "raster_size_format",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "img/og.jpg",
+          "bytes": 48889
+        }
+      ]
+    },
+    {
+      "check": "syntax:js/analytics.js",
+      "status": "PASS",
+      "evidence": {
+        "command": "node --check js/analytics.js",
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "check": "syntax:js/booking.js",
+      "status": "PASS",
+      "evidence": {
+        "command": "node --check js/booking.js",
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "check": "syntax:js/config.js",
+      "status": "PASS",
+      "evidence": {
+        "command": "node --check js/config.js",
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "check": "syntax:js/form.js",
+      "status": "PASS",
+      "evidence": {
+        "command": "node --check js/form.js",
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "check": "syntax:js/main.js",
+      "status": "PASS",
+      "evidence": {
+        "command": "node --check js/main.js",
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "check": "analytics_local_vm_contract",
+      "status": "PASS",
+      "evidence": {
+        "command": "node tests/analytics.test.cjs",
+        "exit_code": 0,
+        "stdout": "PASS: local analytics contract: GA4 bootstrap, 5-UTM URL allowlist, referrer stripping, debug opt-in/reset, disabled ID, parameter allowlist, length cap, event whitelist, all 9 landing paths and UTM sanitization. NOT a GA4 delivery test.\n",
+        "stderr": "",
+        "limitation": "Local browser mocks only; not GA4 delivery or DebugView evidence"
+      }
+    },
+    {
+      "check": "apps_script_local_vm_tests",
+      "status": "PASS",
+      "evidence": {
+        "command": "node tests/backend.test.cjs",
+        "exit_code": 0,
+        "stdout": "PASS: valid write, server status, UTM, text phone, duplicate, eight validation cases, invalid JSON, capacity and no_show release. Local VM only, not Google integration.\nPASS: Moscow date boundary, 14-day limit, past slot, timezone, non-hour slot, name/email lengths.\n",
+        "stderr": "",
+        "limitation": "VM mocks Google services; not a real Sheets integration"
+      }
+    }
+  ]
+}
