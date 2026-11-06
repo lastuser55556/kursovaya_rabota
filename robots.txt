@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tests/
+Disallow: /tmp/
+Disallow: /thanks.html
+Sitemap: https://lastuser55556.github.io/kursovaya_rabota/sitemap.xml

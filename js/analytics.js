@@ -13,11 +13,14 @@
   }
   window.dataLayer = window.dataLayer || [];
   function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag=gtag;
   const enabled = /^G-[A-Z0-9]+$/.test(config.ga4Id || '');
   if (enabled) {
     const tag = document.createElement('script'); tag.async = true;
     tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(config.ga4Id);
-    if(!document.querySelector('script[data-ga4]')) document.head.append(tag); gtag('js', new Date());
+    const external=document.querySelector('script[data-ga4]')||tag;
+    external.dataset.debug=String(debug); external.addEventListener('load',()=>external.dataset.status='loaded'); external.addEventListener('error',()=>external.dataset.status='failed');
+    if(external===tag) document.head.append(tag); gtag('js', new Date());
     // Strip all arbitrary URL parameters to prevent accidental PII in page_location.
     const safe = new URL(location.href); const params = new URLSearchParams();
     for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']) {
