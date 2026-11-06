@@ -47,8 +47,9 @@
   function error(name,message,type='invalid') { const el=field(name); el?.setAttribute('aria-invalid','true'); const target=document.getElementById('error-'+name); if(target)target.textContent=message; track('form_error',{field_name:name,error_type:type}); }
   form.addEventListener('input',event=>clearError(event.target.name));
   let sending=false;
+  let completed=false;
   form.addEventListener('submit',async event=>{
-    event.preventDefault(); if(sending)return;
+    event.preventDefault(); if(sending || completed)return;
     form.querySelectorAll('.field-error').forEach(el=>el.textContent='');
     form.querySelectorAll('[aria-invalid]').forEach(el=>el.removeAttribute('aria-invalid'));
     const data=Object.fromEntries(new FormData(form));
@@ -79,11 +80,14 @@
         track('form_error',{field_name:result.field||'form',error_type:'server'});return;
       }
       const booking={request_id:data.request_id,slot:data.slot};
-      sessionStorage.setItem('k21_booking',JSON.stringify(booking));
+      completed=true;
+      let stored=true;
+      try { sessionStorage.setItem('k21_booking',JSON.stringify(booking)); } catch (_) { stored=false; }
       track('generate_lead',{lead_rim_size:data.rim_size,lead_car_type:data.car_type,lead_source:data.utm_source});
       // Небольшая пауза позволяет тегу поставить событие в транспорт до перехода.
-      setTimeout(()=>location.assign('thanks.html'),350);
+      if (stored) setTimeout(()=>location.assign('thanks.html'),350);
+      else status.textContent=`Заявка ${data.request_id} принята на ${data.slot}. Сохраните номер: браузер запретил сохранение подтверждения.`;
     } catch (_) { status.textContent='Не удалось получить подтверждение сервера. Проверьте соединение и повторите с тем же номером заявки. При повторной записи сервер защитит от дубля.';track('form_error',{field_name:'form',error_type:'server'}); }
-    finally{clearTimeout(timer);sending=false;button.disabled=false;}
+    finally{clearTimeout(timer);sending=false;button.disabled=completed;}
   });
 })();

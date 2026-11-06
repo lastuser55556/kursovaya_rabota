@@ -29,8 +29,10 @@ function validatePayload(input, now) {
   if (!/^\d{4}-\d{2}-\d{2}T(?:0[8-9]|1\d|2[01]):00:00\+03:00$/.test(d.slot)) return {error:'invalid_slot',field:'slot'};
   const slotDate = new Date(d.slot);
   const today = new Date(now);
-  const maxDay = new Date(today.getTime() + 14 * 86400000);
-  if (!Number.isFinite(slotDate.getTime()) || slotDate <= today || slotDate > maxDay) return {error:'invalid_slot',field:'slot'};
+  // Ровно те же 14 календарных дней, что в браузере: сегодня + 13 дней.
+  const moscowDay = new Date(today.getTime() + 3 * 3600000).toISOString().slice(0,10);
+  const maxDay = new Date(new Date(moscowDay + 'T00:00:00+03:00').getTime() + 14 * 86400000);
+  if (!Number.isFinite(slotDate.getTime()) || slotDate <= today || slotDate >= maxDay) return {error:'invalid_slot',field:'slot'};
   // Проверяем реальные компоненты даты (31 февраля не должен превратиться в март).
   const normalized = new Date(slotDate.getTime()+3*3600000).toISOString().slice(0,16);
   if (normalized !== d.slot.slice(0,16)) return {error:'invalid_slot',field:'slot'};

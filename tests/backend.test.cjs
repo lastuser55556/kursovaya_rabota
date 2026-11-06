@@ -16,3 +16,12 @@ assert.equal(post({...payload,request_id:'REQ-12345678-1234-4123-8123-1234567890
 rows[0][12]='no_show';assert.equal(post({...payload,request_id:'REQ-12345678-1234-4123-8123-123456789016'}).ok,true);
 assert.equal(rows.length,5);assert.equal(locked,false);
 console.log('PASS: valid write, server status, UTM, text phone, duplicate, eight validation cases, invalid JSON, capacity and no_show release. Local VM only, not Google integration.');
+const fixedNow = new Date('2026-11-06T23:30:00-08:00'); // Москва уже 7 ноября.
+assert.equal(!!ctx.validatePayload({...payload,slot:'2026-11-20T21:00:00+03:00'},fixedNow).data,true);
+assert.equal(ctx.validatePayload({...payload,slot:'2026-11-21T08:00:00+03:00'},fixedNow).error,'invalid_slot');
+assert.equal(ctx.validatePayload({...payload,slot:'2026-11-07T08:00:00+03:00'},fixedNow).error,'invalid_slot');
+assert.equal(ctx.validatePayload({...payload,slot:'2026-11-08T10:00:00-08:00'},fixedNow).error,'invalid_slot');
+assert.equal(ctx.validatePayload({...payload,slot:'2026-11-08T10:30:00+03:00'},fixedNow).error,'invalid_slot');
+assert.equal(ctx.validatePayload({...payload,name:'a'.repeat(61)},fixedNow).error,'invalid_name');
+assert.equal(ctx.validatePayload({...payload,email:'a'.repeat(201)},fixedNow).error,'too_long');
+console.log('PASS: Moscow date boundary, 14-day limit, past slot, timezone, non-hour slot, name/email lengths.');

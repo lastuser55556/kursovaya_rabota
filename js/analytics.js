@@ -16,14 +16,15 @@
   if (enabled) {
     const tag = document.createElement('script'); tag.async = true;
     tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(config.ga4Id);
-    document.head.append(tag); gtag('js', new Date());
+    if(!document.querySelector('script[data-ga4]')) document.head.append(tag); gtag('js', new Date());
     // Strip all arbitrary URL parameters to prevent accidental PII in page_location.
     const safe = new URL(location.href); const params = new URLSearchParams();
     for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']) {
       const value=safe.searchParams.get(key); if(value && /^[a-z0-9_]{1,100}$/.test(value)) params.set(key,value);
     }
     safe.search=params.toString(); safe.hash='';
-    gtag('config', config.ga4Id, {page_location:safe.href, debug_mode:false});
+    let referrer=''; try{const r=new URL(document.referrer);r.search='';r.hash='';referrer=r.href;}catch{}
+    gtag('config', config.ga4Id, {page_location:safe.href, page_referrer:referrer, debug_mode:false});
   }
   window.K21 = {track(name, values = {}) {
     if (!events.has(name)) return;
